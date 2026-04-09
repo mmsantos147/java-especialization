@@ -1,6 +1,6 @@
-package com.utfpr;
+package com.mss;
 
-public class Veiculo {
+public abstract class Veiculo {
     private String placa;
     private String marca;
     private String modelo;
@@ -91,6 +91,8 @@ public class Veiculo {
         return qtdRodas;
     }
 
+    public abstract float calcVel(float velocMax);
+
     @Override
     public String toString() {
         return "Placa: " + placa + "\n" +
@@ -98,6 +100,7 @@ public class Veiculo {
             "Modelo: " + modelo + "\n" +
             "Cor: " + cor + "\n" +
             "Velocidade Máxima: " + velocMax + "\n" +
+            "Velocidade Máxima Convertida: " + calcVel(velocMax) + "\n" +
             "Quantidade de Rodas: " + qtdRodas + "\n" +
             "Quantidade de Pistões do Motor: " + motor.getQtdPist() + "\n" +
             "Potencia do Motor: " + motor.getPotencia() + "\n"

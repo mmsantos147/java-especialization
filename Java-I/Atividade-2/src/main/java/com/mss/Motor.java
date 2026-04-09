@@ -1,4 +1,4 @@
-package com.utfpr;
+package com.mss;
 public class Motor {
     private int qtdPist;
     private int potencia;
@@ -6,6 +6,11 @@ public class Motor {
     public Motor()  {
         this.qtdPist = 0;
         this.potencia = 0;
+    }
+
+    public Motor(int qtdPist, int potencia)  {
+        this.qtdPist = qtdPist;
+        this.potencia = potencia;
     }
 
     public void setQtdPist(int qtdPist) {
