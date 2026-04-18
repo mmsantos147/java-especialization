@@ -1,6 +1,6 @@
 package com.mss;
 
-public class Carga extends Veiculo {
+public final class Carga extends Veiculo implements Calcular {
 
     private int cargaMax;
     private int tara;
@@ -37,4 +37,16 @@ public class Carga extends Veiculo {
         return velocMax * 100000;
     }
     
+    @Override
+    public int calcular() {
+        return (int) getVelocMax() + getQtdRodas() + getMotor().getQtdPist() + getMotor().getQtdPist() + getCargaMax() + getTara();
+    }
+
+    public String toString() {
+    return super.toString() +
+        "Carga Máxima: " + getCargaMax() + "\n" +
+        "Tara: " + getTara() + "\n" +
+        "Velocidade Máxima Convertida: " + calcVel(getVelocMax()) + " Cm/h\n" +
+        "Calculo dos atributos numéricos: " + calcular() + "\n";
+}
 }

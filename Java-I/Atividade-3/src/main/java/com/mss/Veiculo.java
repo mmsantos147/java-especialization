@@ -99,8 +99,7 @@ public abstract class Veiculo {
             "Marca: " + marca + "\n" +
             "Modelo: " + modelo + "\n" +
             "Cor: " + cor + "\n" +
-            "Velocidade Máxima: " + velocMax + "\n" +
-            "Velocidade Máxima Convertida: " + calcVel(velocMax) + "\n" +
+            "Velocidade Máxima: " + velocMax + " Km/h\n" +
             "Quantidade de Rodas: " + qtdRodas + "\n" +
             "Quantidade de Pistões do Motor: " + motor.getQtdPist() + "\n" +
             "Potencia do Motor: " + motor.getPotencia() + "\n"

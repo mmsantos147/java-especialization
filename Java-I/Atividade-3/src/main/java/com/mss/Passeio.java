@@ -1,6 +1,6 @@
 package com.mss;
 
-public class Passeio extends Veiculo {
+public final class Passeio extends Veiculo implements Calcular {
 
     private int qtdPassageiros;
 
@@ -32,4 +32,17 @@ public class Passeio extends Veiculo {
         return velocMax * 1000;
     }
     
+    @Override
+    public int calcular() {
+        return getPlaca().length() + getMarca().length() + getModelo().length() + getCor().length();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+            "Quantidade de Passageiros do Veículo: " + getQtdPassageiros() + "\n" +
+            "Velocidade Máxima Convertida: " + calcVel(getVelocMax()) + " M/h\n" +
+            "Calculo da quantidade de letras nos atributos Strings: " + calcular() + "\n"
+        ;
+    }
 }

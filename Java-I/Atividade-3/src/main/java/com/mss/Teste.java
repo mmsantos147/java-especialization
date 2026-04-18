@@ -54,33 +54,6 @@ public class Teste {
                     break;
             }
         }
-
-        Passeio veiculo1 = new Passeio();
-        veiculo1.setPlaca("ABC1D23");
-        veiculo1.setMarca("Toyota");
-        veiculo1.setModelo("Corolla");
-        veiculo1.setCor("Prata");
-        veiculo1.setVelocMax(180.0f);
-        veiculo1.setQtdRodas(4);
-        veiculo1.getMotor().setQtdPist(4);
-        veiculo1.getMotor().setPotencia(132);
-        veiculo1.setQtdPassageiros(5);
-                
-        Carga carga1 = new Carga();
-        carga1.setPlaca("BRA2A11");
-        carga1.setMarca("Volvo");
-        carga1.setModelo("FH 460");
-        carga1.setCor("Branco");
-        carga1.setVelocMax(130.0f);
-        carga1.setQtdRodas(6);
-        carga1.getMotor().setQtdPist(6);
-        carga1.getMotor().setPotencia(460);
-        carga1.setCargaMax(25000);
-        carga1.setTara(8500);
-
-        System.out.println("Veiculo de Passeio 1: Corolla\n" + veiculo1.toString() + "Quantidade de Passageiros: " + veiculo1.getQtdPassageiros() + "\n");
-        
-        System.out.println("Veiculo de Carga 1: FH 460\n" + carga1.toString() + "Carga Máxima: " + carga1.getCargaMax() + "\n" + "Tara: " + carga1.getTara() + "\n");
     }
 
     private static void cadastrarPasseio() {
@@ -192,7 +165,7 @@ public class Teste {
     
     private static void buscarPasseioPorPlaca() {
         String placa = leitura.entDados("Digite a placa do Veículo: ");
-        boolean encontrado = true;
+        boolean encontrado = false;
 
         for(int i = 0; i < contadorPasseio; i++) {
             if (passeios[i].getPlaca().equals(placa)) {
