@@ -9,13 +9,15 @@ public final class Carga extends Veiculo implements Calcular {
         this.cargaMax = 0;
         this.tara = 0;
     }
+
     public Carga(String placa, String marca, String modelo, String cor,
                 float velocMax, int qtdRodas, int qtdPist, int potencia,
-                int cargaMax, int tara) {
+                int cargaMax, int tara) throws VelocException {
         super(placa, marca, modelo, cor, velocMax, qtdRodas, qtdPist, potencia);
         this.cargaMax = cargaMax;
         this.tara = tara;
     }
+    
     public int getCargaMax() {
         return cargaMax;
     }

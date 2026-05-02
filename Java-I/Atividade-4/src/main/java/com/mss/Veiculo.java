@@ -19,7 +19,11 @@ public abstract class Veiculo {
         this.motor = new Motor();
     }
     
-    public Veiculo(String placa, String marca, String modelo, String cor, float velocMax, int qtdRodas) {
+    public Veiculo(String placa, String marca, String modelo, String cor, float velocMax, int qtdRodas) throws VelocException {
+        if (velocMax < 80 || velocMax > 110) {
+            throw new VelocException("A velocidade máxima está fora dos limites brasileiros");
+        }
+        
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -29,7 +33,11 @@ public abstract class Veiculo {
         this.motor = new Motor();
     }
 
-    public Veiculo(String placa, String marca, String modelo, String cor, float velocMax, int qtdRodas, int qtdPist, int potencia) {
+    public Veiculo(String placa, String marca, String modelo, String cor, float velocMax, int qtdRodas, int qtdPist, int potencia) throws VelocException {
+        if (velocMax < 80 || velocMax > 110) {
+            throw new VelocException("A velocidade máxima está fora dos limites brasileiros");
+        }
+
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
