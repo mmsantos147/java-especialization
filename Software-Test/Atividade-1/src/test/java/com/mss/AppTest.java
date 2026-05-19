@@ -12,6 +12,17 @@ public class AppTest {
                 "\"a1\" é válido e não deve lançar exceção");
     }
  
+    /** Classe (2) — inválido, tamanho maior que 6 */
+    @Test
+    void testTamanhoExcedido() {
+        IllegalArgumentException ex = assertThrows(
+                IllegalArgumentException.class,
+                () -> App.validarIdentificador("A1b2C3d")
+        );
+        assertTrue(ex.getMessage().contains("Tamanho inválido"),
+                "Mensagem deve indicar que o tamanho é inválido");
+    }
+    
     /** Classe (4) — inválido, primeiro caractere é dígito */
     @Test
     void testPrimeiroCharInvalido() {
@@ -32,17 +43,6 @@ public class AppTest {
         );
         assertTrue(ex.getMessage().contains("Caractere inválido"),
                 "Mensagem deve indicar que há um caractere inválido");
-    }
- 
-    /** Classe (2) — inválido, tamanho maior que 6 */
-    @Test
-    void testTamanhoExcedido() {
-        IllegalArgumentException ex = assertThrows(
-                IllegalArgumentException.class,
-                () -> App.validarIdentificador("A1b2C3d")
-        );
-        assertTrue(ex.getMessage().contains("Tamanho inválido"),
-                "Mensagem deve indicar que o tamanho é inválido");
     }
 
 }

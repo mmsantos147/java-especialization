@@ -6,7 +6,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 
-public class TesteGUI {
+public class Teste {
     private static BDVeiculos bdVeiculos = new BDVeiculos();
 
     private static JFrame frame;

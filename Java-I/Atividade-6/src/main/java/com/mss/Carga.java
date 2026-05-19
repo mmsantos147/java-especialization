@@ -1,0 +1,54 @@
+package com.mss;
+
+public final class Carga extends Veiculo implements Calcular {
+
+    private int cargaMax;
+    private int tara;
+
+    public Carga() {
+        this.cargaMax = 0;
+        this.tara = 0;
+    }
+
+    public Carga(String placa, String marca, String modelo, String cor,
+                float velocMax, int qtdRodas, int qtdPist, int potencia,
+                int cargaMax, int tara) throws VelocException {
+        super(placa, marca, modelo, cor, velocMax, qtdRodas, qtdPist, potencia);
+        this.cargaMax = cargaMax;
+        this.tara = tara;
+    }
+    
+    public int getCargaMax() {
+        return cargaMax;
+    }
+
+    public int getTara() {
+        return tara;
+    }
+
+    public void setCargaMax(int cargaMax) {
+        this.cargaMax = cargaMax;
+    }
+
+    public void setTara(int tara) {
+        this.tara =  tara;
+    }
+
+    @Override
+    public float calcVel(float velocMax) {
+        return velocMax * 100000;
+    }
+    
+    @Override
+    public int calcular() {
+        return (int) getVelocMax() + getQtdRodas() + getMotor().getQtdPist() + getMotor().getQtdPist() + getCargaMax() + getTara();
+    }
+
+    public String toString() {
+    return super.toString() +
+        "Carga Máxima: " + getCargaMax() + "\n" +
+        "Tara: " + getTara() + "\n" +
+        "Velocidade Máxima Convertida: " + calcVel(getVelocMax()) + " Cm/h\n" +
+        "Calculo dos atributos numéricos: " + calcular() + "\n";
+}
+}
