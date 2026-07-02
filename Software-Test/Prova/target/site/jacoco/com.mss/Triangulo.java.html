@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Triangulo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Prova</a> &gt; <a href="index.source.html" class="el_package">com.mss</a> &gt; <span class="el_source">Triangulo.java</span></div><h1>Triangulo.java</h1><pre class="source lang-java linenums">package com.mss;
+
+public class Triangulo {
+    private Double lado1;
+    private Double lado2;
+    private Double lado3;
+
+<span class="fc" id="L8">    public Triangulo() {}</span>
+
+<span class="fc" id="L10">    public Triangulo(Double lado1, Double lado2, Double lado3) {</span>
+<span class="fc" id="L11">        this.lado1 = lado1;</span>
+<span class="fc" id="L12">        this.lado2 = lado2;</span>
+<span class="fc" id="L13">        this.lado3 = lado3;</span>
+<span class="fc" id="L14">    }</span>
+
+    public boolean isTriangulo(Double lado1, Double lado2, Double lado3) {
+<span class="fc bfc" id="L17" title="All 6 branches covered.">        if (lado1 &lt;= 0 || lado2 &lt;= 0 || lado3 &lt;= 0) throw new IllegalArgumentException(&quot;O valor do lado deve ser positivo e maior que 0&quot;);</span>
+<span class="fc bfc" id="L18" title="All 6 branches covered.">        return lado1 + lado2 &gt; lado3 &amp;&amp; lado1 + lado3 &gt; lado2 &amp;&amp; lado2 + lado3 &gt; lado1;</span>
+    }
+
+    public String tipoTriangulo(Double lado1, Double lado2, Double lado3) {
+<span class="fc bfc" id="L22" title="All 4 branches covered.">        if (lado1.equals(lado2) &amp;&amp; lado2.equals(lado3)) return &quot;equilatero&quot;;</span>
+<span class="fc bfc" id="L23" title="All 6 branches covered.">        if (lado1.equals(lado2) || lado1.equals(lado3) || lado2.equals(lado3)) return &quot;isosceles&quot;;</span>
+<span class="fc" id="L24">        return &quot;escaleno&quot;;</span>
+    }
+
+    public void setLado1(Double lado1) {
+<span class="fc" id="L28">        this.lado1 = lado1;</span>
+<span class="fc" id="L29">    }</span>
+
+    public void setLado2(Double lado2) {
+<span class="fc" id="L32">        this.lado2 = lado2;</span>
+<span class="fc" id="L33">    }</span>
+    
+    public void setLado3(Double lado3) {
+<span class="fc" id="L36">        this.lado3 = lado3;</span>
+<span class="fc" id="L37">    }</span>
+
+    public Double getLado1() {
+<span class="fc" id="L40">        return lado1;</span>
+    }
+    
+    public Double getLado2() {
+<span class="fc" id="L44">        return lado2;</span>
+    }
+
+    public Double getLado3() {
+<span class="fc" id="L48">        return lado3;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

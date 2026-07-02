@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mss.TrianguloTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in com.mss.TrianguloTest
